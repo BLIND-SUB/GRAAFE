@@ -1,4 +1,4 @@
-## GNN MLOPS SC 2023 artifact evaluation
+## GNN artifacts
 README
 This repository contains slurm batch scripts for GNN and the baselines using which the results mentioned in the paper could be replicated.
 
