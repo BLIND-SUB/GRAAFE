@@ -1,6 +1,6 @@
-# **Combining GNN and MLOps for production-grade Anomaly Prediction on a Tier-0 Supercomputer**
+# **GRAAFE: GRaph Anomaly Anticipation Framework for Exascale HPC systems**
 
-### Authors: Martin Molan, Mohsen Seyedkazemi Ardebili, Junaid Ahmed Khan, Daniele Cesarini, Francesco Beneventi, Andrea Borghesi, Andrea Bartolini
+### Authors: BLIND
 
 
 
