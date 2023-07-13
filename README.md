@@ -1,4 +1,4 @@
-# **Combining GNN and MLOps for production-grade Anomaly Prediction on a Tier-0 Supercomputer**
+# **GRAAFE: GRaph Anomaly Anticipation Framework for Exascale HPC systems**
 
 ### Authors: BLIND for review
 
