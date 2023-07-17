@@ -174,19 +174,11 @@ The GNN anomaly anticipation model's main output is the anomaly's probability in
 
 The Brier score, a widely used measure for evaluating the calibration of probability predictions in binary classification cases, assesses the mean squared difference between predicted probabilities and actual outcomes. This metric yields values ranging from 0 to 1, where perfect calibration is indicated by a score of zero. It should be noted that the Brier score does not evaluate classification performance directly but instead focuses solely on the calibration aspect.
 
-The results of the Brier score calculation on the test set are collected in table \ref{tab:calibration}. Here we see that the GNN achieves (for all future windows) a probability score of fewer than 0.1. According to expectation, the calibration score rises with larger future windows as the approach attempts to make predictions on a more difficult problem. For future windows $4$ and $6$ (one hour and one and a half hours) Brier score is below 0.01, indicating an extremely well-calibrated classifier.
+The results of the Brier score calculation on the test set are collected in table bellow. Here we see that the GNN achieves (for all future windows) a probability score of fewer than 0.1. According to expectation, the calibration score rises with larger future windows as the approach attempts to make predictions on a more difficult problem. For future windows 4 and 6 (one hour and one and a half hours) Brier score is below 0.01, indicating an extremely well-calibrated classifier.
 
-The results from the calibration evaluation mean that no additional calibration adjustment needs to be performed on the probability predictions of the GNN classifier. The probability outputs of the GNN model can be communicated directly to the system administrators as discussed in section \ref{sec:exp_gnnPred_visu}.
-
-
-<div>
-$$\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-\toprule
-\multicolumn{1}{|c|}{FW}               & {4}        & {6}        & {12}       & {24}       & {32}       & {64}       & {96}       & {192}      & {288} \\ \hline
-\midrule
-\multicolumn{1}{|c|} {Brier Score} & {0.008} & {0.009} & {0.012} & {0.017} & {0.020} & {0.031} & {0.040} & {0.063} & {0.083}\\
+The results from the calibration evaluation mean that no additional calibration adjustment needs to be performed on the probability predictions of the GNN classifier. The probability outputs of the GNN model can be communicated directly to the system administrators as discussed in section V.3 of the main paper.
 
 
-\bottomrule
-\end{tabular}$$
-<div>
+| FW          | 4     | 6     | 12    | 24    | 32    | 32    | 64    | 96    | 192   |
+|-------------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
+| Brier Score | 0.008 | 0.009 | 0.012 | 0.017 | 0.020 | 0.031 | 0.040 | 0.063 | 0.083 |
