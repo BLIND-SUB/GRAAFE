@@ -182,3 +182,41 @@ The results from the calibration evaluation mean that no additional calibration 
 | FW          | 4     | 6     | 12    | 24    | 32    | 32    | 64    | 96    | 192   |
 |-------------|-------|-------|-------|-------|-------|-------|-------|-------|-------|
 | Brier Score | 0.008 | 0.009 | 0.012 | 0.017 | 0.020 | 0.031 | 0.040 | 0.063 | 0.083 |
+
+
+### Computational resources requirements
+
+The table reports the computation resource requirements and deployment overhead for the anomaly prediction pipeline on the
+ ExaMon monitoring system. The table is divided into different components, providing a deep insight into the design and architectural
+ view of the monitoring system. We provided a baseline that shows the normal load and traffic of the system
+ without running any anomaly detection pipeline. This result can be a good candidate to compute the overhead of deploying DNN
+ models and benefit future per-exascale design.
+
+ | Configuration Name                   | Proxy            | Total           |
+| ------------------------------------ | ---------------- | --------------- |
+| #vcores                              | Mem[GB]          | Net in[Kb/s]    | Net out[Kb/s] | #vcores | Mem[GB] | Net in[Kb/s] | Net out[Kb/s] |
+| Baseline                             | 0.18             | 2.64            | 838 | 832 | 3.08 | 189.96 | 6670 | 6739 |
+| One Rack, One Pod, Continuous        | 0.64             | 2.6             | 960 | 956 | 4.47 | 188.7 | 10457 | 10490 |
+| One Rack, One Pod, Discrete          | 0.19             | 2.59            | 899 | 895 | 3.59 | 189.42 | 9588 | 7832 |
+| All Racks, Multiple Pods, Continuous | 1.98             | 2.64            | 1282 | 1289 | 7.9 | 189.64 | 18310 | 12570 |
+| All Racks, Multiple Pods, Discrete   | 0.34             | 2.61            | 937 | 935 | 3.84 | 189.45 | 8724 | 8152 |
+| All Racks, One Pod, Continuous       | 0.32             | 2.61            | 990 | 987 | 5.87 | 189.51 | 9190 | 8546 |
+| All Racks, One Pod, Discrete         | 0.19             | 2.61            | 924 | 922 | 3.41 | 189.43 | 8686 | 7738 |
+| Configuration Name                   | Read-KairosDB00  | Read-KairosDB01 |
+| #vcores                              | Mem[GB]          | Net in[Kb/s]    | Net out[Kb/s] | #vcores | Mem[GB] | Net in[Kb/s] | Net out[Kb/s] |
+| Baseline                             | 0.06             | 24.5            | 613 | 73.3 | 0.03 | 24.3 | 529 | 17 |
+| One Rack, One Pod, Continuous        | 0.16             | 24.3            | 2148 | 122 | 0.13 | 24.1 | 2167 | 2148 |
+| One Rack, One Pod, Discrete          | 0.11             | 24.3            | 1848 | 108 | 0.08 | 24.1 | 1941 | 53 |
+| All Racks, Multiple Pods, Continuous | 0.4              | 24.4            | 5971 | 295 | 0.38 | 24.2 | 5809 | 233 |
+| All Racks, Multiple Pods, Discrete   | 0.12             | 24.3            | 1638 | 102 | 0.09 | 24.2 | 1646 | 53 |
+| All Racks, One Pod, Continuous       | 0.16             | 24.3            | 1804 | 310 | 0.12 | 24.1 | 1567 | 247 |
+| All Racks, One Pod, Discrete         | 0.1              | 24.3            | 1502 | 99.1 | 0.06 | 24.1 | 1428 | 45 |
+| Configuration Name                   | Write-KairosDB00 | Cassandra       |
+| #vcores                              | Mem[GB]          | Net in[Kb/s]    | Net out[Kb/s] | #vcores | Mem[GB] | Net in[Kb/s] | Net out[Kb/s] |
+| Baseline                             | 1.84             | 23.8            | 3450 | 3739 | 0.97 | 114.72 | 1240 | 2078 |
+| One Rack, One Pod, Continuous        | 2                | 23.7            | 3426 | 3784 | 1.54 | 114 | 1756 | 3480 |
+| One Rack, One Pod, Discrete          | 1.84             | 23.7            | 3244 | 3757 | 1.37 | 114.72 | 1656 | 3019 |
+| All Racks, Multiple Pods, Continuous | 2.4              | 23.6            | 2747 | 3866 | 2.74 | 114.8 | 2501 | 6887 |
+| All Racks, Multiple Pods, Discrete   | 1.84             | 23.7            | 2871 | 3760 | 1.45 | 114.64 | 1632 | 3302 |
+| All Racks, One Pod, Continuous       | 1.92             | 23.7            | 2983 | 3803 | 3.35 | 114.8 | 1846 | 3199 |
+| All Racks, One Pod, Discrete         | 1.84             | 23.7            | 3351 | 3780 | 1.22 | 114.72 | 1481 | 2892 |
