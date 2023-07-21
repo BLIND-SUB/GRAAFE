@@ -187,15 +187,17 @@ The results from the calibration evaluation mean that no additional calibration 
 ### Computational resources requirements
 
 
+
+
 The table reports the computation resource requirements and deployment overhead for the anomaly prediction pipeline on the
  ExaMon monitoring system. The table is divided into different components, providing a deep insight into the design and architectural
- view of the monitoring system. We provided a baseline that shows the normal load and traffic of the system without running any anomaly detection pipeline. This result can be a good candidate to compute the overhead of deploying DNN models and benefit future per-exascale design.
+ view of the monitoring system. We provided a baseline that shows the normal load and traffic of the system without running any anomaly detection pipeline. This result is a basis for estimating the overhead of deploying DNN models and benefiting future per-exascale design.
 
-As noted, different setups impact resource utilization differently; in many cases, the impact is almost negligible, while in a few others, it is more marked.
-
-The resource usage of some parts of the framework stayed mostly the same during the pipeline. This indicates that running pipelines has no significant effect on these parts. 
+Different setups impact resource utilization differently; in many cases, the impact is almost negligible, while in a few others, it is more marked. The resource usage of some parts of the framework mainly stayed the same during the pipeline. This indicates that running pipelines has no significant effect on these parts. 
 
 Using multiple pods in a continuous approach increases the CPU load of the monitoring system by 2.5 times. Conversely, using the one discrete pod has a minimal impact on memory RAM usage (practically no difference) and a very limited effect on CPU resources, namely a 10% increase (from 3.08 to 3.42, as shown in the table). 
+
+**The results** collected in this section **demonstrate that the GNN model deployment, as part of the GRAAFE framework, has negligible computational overhead compared to only the monitoring system**. This makes the GNN anomaly detection and the **GRAAFE framework suitable for deployment in most High-performance computing and data center environments**.
 
 | **Configuration Name: Proxy**|            **#vcores**                            |       **Mem[GB]** |     **Net in[Kb/s]**   |          **Net out[Kb/s]**                  |
 |--------------------------------------|:--------------------:|:-----------:|:----------------:|:-----------------:|
