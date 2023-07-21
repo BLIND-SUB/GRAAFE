@@ -207,13 +207,13 @@ Using multiple pods in a continuous approach increases the CPU load of the monit
 | All Racks, One Pod, Continuous       |                 0.32 |        2.61 |              990 |               987 |
 | All Racks, One Pod, Discrete         |                 0.19 |        2.61 |              924 |               922 |
 |  **Configuration Name: Read-KairosDB-00**                                      | **#vcores**          | **Mem[GB]** | **Net in[Kb/s]** | **Net out[Kb/s]** |
-| Baseline                             |                 0.06 |        24.5 |              613 |              73.3 |
+| Baseline                             |                 0.06 |        24.5 |              613 |              73 |
 | One Rack, One Pod, Continuous        |                 0.16 |        24.3 |             2148 |               122 |
 | One Rack, One Pod, Discrete          |                 0.11 |        24.3 |             1848 |               108 |
 | All Racks, Multiple Pods, Continuous |                  0.4 |        24.4 |             5971 |               295 |
 | All Racks, Multiple Pods, Discrete   |                 0.12 |        24.3 |             1638 |               102 |
 | All Racks, One Pod, Continuous       |                 0.16 |        24.3 |             1804 |               310 |
-| All Racks, One Pod, Discrete         |                  0.1 |        24.3 |             1502 |              99.1 |
+| All Racks, One Pod, Discrete         |                  0.1 |        24.3 |             1502 |              99 |
 |     **Configuration Name: Write-KairosDB-00**                                   | **#vcores**          | **Mem[GB]** | **Net in[Kb/s]** | **Net out[Kb/s]** |
 | Baseline                             |                 1.84 |        23.8 |             3450 |              3739 |
 | One Rack, One Pod, Continuous        |                    2 |        23.7 |             3426 |              3784 |
