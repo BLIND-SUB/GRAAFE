@@ -175,6 +175,19 @@ F1 scores are computed alongside the primary performance measure of Area under t
 For the demonstration of the performance of the model in a classical classification scenario (binary classification), we also include the F1 score. For each classifier, the optimal classification threshold has been selected (the threshold that maximizes the F1 score).
 
 
+| **FW** | **GNN**  | **DNN**  | **GB**   | **RF**   | **DT**   | **MC** |
+|--------|----------|----------|----------|----------|----------|--------|
+| 4      | 0.992059 | 0.639118 | 0.720861 | 0.632693 | 0.990706 | NA     |
+| 6      | 0.98886  | 0.584393 | 0.667226 | 0.603072 | 0.988658 | NA     |
+| 12     | 0.985705 | 0.623473 | 0.610866 | 0.537004 | 0.983861 | NA     |
+| 24     | 0.967297 | 0.603271 | 0.608777 | 0.63244  | 0.977952 | NA     |
+| 32     | 0.950449 | 0.583936 | 0.640261 | 0.589429 | 0.973533 | NA     |
+| 64     | 0.871897 | 0.516517 | 0.570006 | 0.551001 | 0.953997 | NA     |
+| 96     | 0.874932 | 0.520964 | 0.6751   | 0.636963 | 0.938449 | NA     |
+| 192    | 0.535873 | 0.466363 | 0.546241 | 0.515365 | 0.900749 | NA     |
+| 288    | 0.504213 | 0.46098  | 0.504169 | 0.534742 | 0.866728 | NA     |
+
+
 ### Probability calibration of the GNN anomaly prediction model
 The GNN anomaly anticipation model's main output is the anomaly's probability in the next time window. For this reason, the calibration of the probability predictions of the GNN classifier is essential. Calibration refers to ensuring that the predicted probabilities from a classifier align with the actual anomaly frequencies in a test set.
 
