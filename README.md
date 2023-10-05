@@ -187,6 +187,9 @@ For the demonstration of the performance of the model in a classical classificat
 | 288    | 0,527326 | 0.46098  | 0.504169 | 0.534742 | 0.866728 | NA     |
 
 
+Because of severely unbalanced classes, however, just observing the F1 scores does not give us a clear picture. The confusion matrixes below show that the decision tree classifier achieves a high F1 score. Still, it behaves almost like a trivial classifier, always predicting class 0 (the majority class). For real-life applications, such a classifier would be utterly useless as it only recognizes (in the best-case scenario) 129 events (out of 95 461).
+
+
 | FW = 4 |    GNN   |   DENSE  |    RF    |    DT    |    GB    |
 |:------:|:--------:|:--------:|:--------:|:--------:|:--------:|
 |   F1   | 0,960251 | 0,639118 | 0,632693 | 0,990706 | 0,720861 |
