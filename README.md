@@ -169,7 +169,7 @@ The `gnn_pipelines.ipynb` notebook contains six different experiments that we co
 ## Some additional experimental results
 In this section, some of the additional experimental results are collected. These results are supplementary to the main paper and help add more detail. They were cut from the final version of the paper to comply with the journal's limit of 8 pages.
 
-### F1 scores
+### F1 scores, percision and recall
 F1 scores are computed alongside the primary performance measure of Area under the curve (AUC). AUC is chosen as a primary performance measure for two reasons: 1) it evaluates the performance of a classifier across all possible thresholds, and 2) the deployed model will output a probability for the anomaly and not just whether the anomaly will occur (binary class).
 
 For the demonstration of the performance of the model in a classical classification scenario (binary classification), we also include the F1 score. For each classifier, the optimal classification threshold has been selected (the threshold that maximizes the F1 score).
@@ -186,6 +186,7 @@ For the demonstration of the performance of the model in a classical classificat
 | 96     | 0.874932 | 0.520964 | 0.6751   | 0.636963 | 0.938449 | NA     |
 | 192    | 0.535873 | 0.466363 | 0.546241 | 0.515365 | 0.900749 | NA     |
 | 288    | 0.504213 | 0.46098  | 0.504169 | 0.534742 | 0.866728 | NA     |
+
 
 
 ### Probability calibration of the GNN anomaly prediction model
