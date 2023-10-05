@@ -266,6 +266,7 @@ Because of severely unbalanced classes, however, just observing the F1 scores do
 |    FP    | 3 592 977 | 5 780 187 | 4 988 708 | 1 425 322 | 5 316 858 |
 |    TP    |  346 326  |   2 665   |   2 499   |    636    |   2 663   |
 
+The confusion matrics show what the AUC scores demonstrate more concisely - the proposed GNN approach outperforms all other methods evaluated in the paper.
 
 ### Probability calibration of the GNN anomaly prediction model
 The GNN anomaly anticipation model's main output is the anomaly's probability in the next time window. For this reason, the calibration of the probability predictions of the GNN classifier is essential. Calibration refers to ensuring that the predicted probabilities from a classifier align with the actual anomaly frequencies in a test set.
