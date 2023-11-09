@@ -31,7 +31,7 @@ The following provides more detailed information about these requirements.
 
 Kubeflow is an open-source machine-learning tool that is built on top of Kubernetes. As such, it requires Kubernetes to be installed. Here is a useful [link](https://charmed-kubeflow.io/docs/get-started-with-charmed-kubeflow) to a tutorial that provides step-by-step instructions on how to install Microk8s - a lightweight version of Kubernetes that can even be installed on your laptop. Additionally, the tutorial provides guidance on how to install and use Kubeflow. Microk8s is a great option for those who are new to Kubernetes and want to get started with Kubeflow quickly and easily. Once you have installed Microk8s, you can follow the tutorial to install and use Kubeflow. With Kubeflow, you can easily develop and deploy machine learning models at scale.
 
-## Monitoring System Clinet (ExaMon Client)
+## Monitoring System Client (ExaMon Client)
 The examon folder contains the examon client libraries required to extract data from the Examon monitoring system. In the data_extraction.py file, we used the Examon client library to extract monitoring metrics that are necessary for the GNN model. We called the function defined in data_extraction.py from main.py.
 For more information about the monitoring system, refer to [this repository](https://github.com/EEESlab/examon/tree/develop/docker) and [this paper](https://doi.org/10.1145/3339186.3339215).
 
